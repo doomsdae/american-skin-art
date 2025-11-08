@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>In Memory of Deaded Walker — American Skin Art</title>
+  <meta name="description" content="A tribute to Deaded Walker — artist, friend, and forever part of the American Skin Art family."/>
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--ink:#0a0a0a;--paper:#0b0b0b}
+    html{scroll-behavior:smooth}
+    .display{font-family:'Cormorant Garamond',serif; letter-spacing:.04em}
+    .inter{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}
+  </style>
+</head>
+<body class="inter bg-[#0b0b0b] text-zinc-100 selection:bg-red-700/50">
+  <header class="sticky top-0 z-40 bg-black/70 backdrop-blur border-b border-white/10">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html#artists" class="display text-2xl tracking-widest">American Skin Art</a>
+      <a href="index.html" class="text-sm rounded-full border border-white/20 px-4 py-2 hover:bg-white/5">Back to Home</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-4xl px-6 py-16">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-3 text-zinc-400">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-80">
+          <path d="M12 2c1.5 1.5 2 3 2 4 0 2-2 3-2 5 0-2-2-3-2-5 0-1 .5-2.5 2-4Z" fill="currentColor"/>
+          <path d="M6 12h12v9a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-9Z" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="text-sm uppercase tracking-widest">In Loving Memory</span>
+      </div>
+      <h1 class="display text-5xl tracking-wider mt-2">Deaded Walker</h1>
+      <p class="text-zinc-400 mt-2">@deadedwalker</p>
+    </div>
+
+    <!-- Text first -->
+    <div class="mt-8 text-zinc-300 leading-relaxed space-y-4">
+      <p>Artist, mentor, and friend — Deaded Walker will always be part of the American Skin Art family. His work, kindness, and presence left a lasting mark on everyone who knew him.</p>
+      <p>This page stands as a simple tribute until a full memorial is written by the studio. If you’d like to share a memory or a photo, please reach out to the shop.</p>
+    </div>
+
+    <!-- Image moved below the text -->
+    <div class="mt-8 rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+      <img src="images/artists/deadedwalker/deadedwalker.jpg" alt="Portrait of Deaded Walker" class="w-full h-auto object-cover" />
+    </div>
+
+    <div class="mt-10">
+      <a href="index.html#artists" class="rounded-full bg-white/90 text-black px-5 py-2 text-sm font-semibold hover:bg-white">Back to Artists</a>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/10 mt-12">
+    <div class="mx-auto max-w-7xl px-6 py-6 text-xs text-zinc-500">
+      © <span id="year"></span> American Skin Art — North Tonawanda, NY
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

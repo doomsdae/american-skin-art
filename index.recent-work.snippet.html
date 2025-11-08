@@ -1,0 +1,16 @@
+<!-- Replace your current 'Recent Work' grid with this slider mount -->
+<section class="mx-auto max-w-7xl px-6 py-20" id="portfolio">
+  <div class="flex items-end justify-between gap-6">
+    <div>
+      <h2 class="display text-4xl tracking-wider">Recent Work</h2>
+      <p class="mt-2 text-zinc-400">Tap any image to pause and use arrows to navigate.</p>
+    </div>
+    <a href="https://instagram.com/sinisterblack_tattoos" target="_blank" rel="noopener" class="text-sm underline text-zinc-300 hover:text-zinc-100">More on Instagram</a>
+  </div>
+
+  <!-- Slider mount; uses /data/devin-works.json by default -->
+  <div class="mt-8" id="recent-showcase" data-json="/data/devin-works.json"></div>
+</section>
+
+<!-- Load after main content, after tailwind script; keep version param for cache-busting -->
+<script defer src="/assets/js/slider.js?v=asa-v1"></script>

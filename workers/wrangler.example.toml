@@ -1,0 +1,13 @@
+# workers/wrangler.example.toml
+name = "asa-instagram-feed"
+main = "instagram-feed.example.js"
+compatibility_date = "2024-11-01"
+
+# Optional KV to cache the last feed
+[[kv_namespaces]]
+binding = "FEED"
+id = "00000000000000000000000000000000"   # replace with real id after creating KV
+
+# Cron trigger (UTC): every 6 hours
+[triggers]
+crons = ["0 */6 * * *"]

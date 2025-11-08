@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>American Skin Art</title>
+  <meta name="description" content="At American Skin Art, every tattoo starts with a conversation. Custom designs, black & grey, fine line, bold graphic, cover-ups, and small tattoos—done with safety, care, and longevity in mind." />
+  <meta name="keywords" content="tattoo shop, tattoo artist, North Tonawanda, Devin Goff, custom tattoos, black and grey tattoos, fine line tattoos, cover ups, American Skin Art" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <meta property="og:title" content="American Skin Art — Devin Goff" />
+  <meta property="og:description" content="North Tonawanda's destination for custom tattoos. View portfolio and book a consult." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('lightbox');
+      document.querySelectorAll('[data-lightbox]')?.forEach(img => {
+        img.addEventListener('click', () => {
+          overlay.querySelector('img').src = img.dataset.full || img.src;
+          overlay.classList.remove('hidden');
+        });
+      });
+      overlay.addEventListener('click', () => overlay.classList.add('hidden'));
+    });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "name": "American Skin Art",
+    "url": "https://americanskinart.example",
+    "logo": "https://americanskinart.example/images/logo.png",
+    "image": [
+      "https://americanskinart.example/images/shop-front.jpg",
+      "https://americanskinart.example/images/interior.jpg"
+    ],
+    "description": "Custom tattoo studio in North Tonawanda, NY specializing in black & grey, fine line, cover-ups, and bold custom work.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "44 Webster St",
+      "addressLocality": "North Tonawanda",
+      "addressRegion": "NY",
+      "postalCode": "14120",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.039,
+      "longitude": -78.864
+    },
+    "sameAs": [
+      "https://instagram.com/americanskinart",
+      "https://instagram.com/sinisterblack_tattoos",
+      "https://share.google/s5hH7YX2zrZPiW8VM"
+    ],
+    "priceRange": "$$",
+    "telephone": "+17166949185",
+    "openingHours": ["Tu-Fr 12:00-20:00", "Sa 12:00-20:00"],
+    "founder": {
+      "@type": "Person",
+      "name": "Devin Goff",
+      "jobTitle": "Owner/Lead Artist",
+      "sameAs": "https://instagram.com/sinisterblack_tattoos"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Danny Peltier",
+        "jobTitle": "Tattoo Artist",
+        "sameAs": "https://instagram.com/dannypeltier.ink"
+      },
+      {
+        "@type": "Person",
+        "name": "Dale Murray",
+        "jobTitle": "Tattoo Artist",
+        "sameAs": "https://instagram.com/cruelbloomtattoo"
+      }
+    ]
+  }
+  </script>
+  <style>
+  /* --- Slider minimal styles --- */
+  #recent-showcase { position: relative; overflow: hidden; }
+  #recent-showcase .slider { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; }
+  #recent-showcase .slides { display: flex; width: 100%; transition: transform .45s ease; }
+  #recent-showcase .slide { min-width: 100%; margin: 0; position: relative; }
+  #recent-showcase img { display: block; width: 100%; height: auto; }
+  #recent-showcase .caption { position: absolute; left: 0; right: 0; bottom: 0; padding: .75rem 1rem; background: linear-gradient(transparent, rgba(0,0,0,.65)); font-size: .9rem; color: rgba(255,255,255,.9); }
+  #recent-showcase .nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.5); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: .5rem .6rem; cursor: pointer; }
+  #recent-showcase .nav.prev { left: .5rem; }
+  #recent-showcase .nav.next { right: .5rem; }
+  #recent-showcase .dots { position: absolute; left: 0; right: 0; bottom: .4rem; display: flex; justify-content: center; gap: .4rem; }
+  #recent-showcase .dot { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.35); border: 0; }
+  #recent-showcase .dot[aria-selected="true"] { background: rgba(255,255,255,.9); }
+  </style>
+</head>
+<body class="inter bg-[#0b0b0b] text-zinc-100 selection:bg-red-700/50">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/70 to-transparent" role="banner">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16" role="navigation" aria-label="Main navigation">
+      <a href="#top" class="flex items-end gap-3 group" aria-label="Go to top">
+        <span class="display text-2xl leading-none tracking-widest">American Skin Art</span>
+        <span class="text-xs text-zinc-400 group-hover:text-zinc-200">North Tonawanda, NY</span>
+      </a>
+      <button id="mobile-menu-button" class="md:hidden rounded-full p-2 hover:bg-white/10" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <ul class="hidden md:flex items-center gap-8 text-sm" role="menubar">
+        <!-- <li role="none"><a href="#portfolio" class="hover:text-white/90 text-zinc-300" role="menuitem" aria-label="View portfolio">Portfolio</a></li> -->
+        <li role="none"><a href="#artists" class="hover:text-white/90 text-zinc-300" role="menuitem" aria-label="Meet our artists">Artists</a></li>
+        <!-- <li role="none"><a href="#book" class="hover:text-white/90 text-zinc-300" role="menuitem" aria-label="Book a consultation">Book</a></li> -->
+        <li role="none"><a href="#shop" class="hover:text-white/90 text-zinc-300" role="menuitem" aria-label="Visit our shop">Shop</a></li>
+        <li role="none"><a href="faq.html" class="hover:text-white/90 text-zinc-300" role="menuitem" aria-label="Frequently asked questions">FAQ</a></li>
+        <li role="none"><a href="#contact" class="hover:text-white/90 text-zinc-300" role="menuitem" aria-label="Contact us">Contact</a></li>
+      </ul>
+      <a href="https://www.instagram.com/americanskinart"
+         target="_blank" rel="noopener noreferrer"
+         class="hidden md:inline-flex items-center gap-2 rounded-full bg-white/90 text-black hover:bg-white px-4 py-2 text-sm font-semibold"
+         aria-label="Visit American Skin Art on Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11.001 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7ZM18.5 6a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001Z"/>
+        </svg>
+        <span class="sr-only">Instagram</span>
+      </a>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur">
+        <div class="flex flex-col items-center justify-center min-h-screen gap-8 text-lg">
+          <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
+              <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <a href="#portfolio" class="hover:text-white/90 text-zinc-300">Portfolio</a>
+          <a href="#artists" class="hover:text-white/90 text-zinc-300">Artists</a>
+          <a href="#book" class="hover:text-white/90 text-zinc-300">Book</a>
+          <a href="#shop" class="hover:text-white/90 text-zinc-300">Shop</a>
+          <a href="faq.html class="hover:text-white/90 text-zinc-300">FAQ</a>
+          <a href="#contact" class="hover:text-white/90 text-zinc-300">Contact</a>
+          <a href="#book" class="mt-4 rounded-full bg-white/90 text-black hover:bg-white px-6 py-3">Book Now</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative min-h-[92vh] flex items-center justify-center">
+    <div class="absolute inset-0">
+      <img src="images/artists/sinisterblack_tattoos/devin-back.jpg" alt="Hero artwork" class="w-full h-full object-cover grayscale contrast-125 brightness-75"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10"></div>
+    </div>
+    <div class="relative mx-auto max-w-5xl px-6 text-center">
+      <p class="uppercase tracking-[0.35em] text-xs text-zinc-300">Custom Tattoo Studio</p>
+      <h1 class="display text-6xl sm:text-7xl md:text-8xl leading-[0.95] mt-4">AMERICAN<br class="hidden sm:block"/> SKIN ART</h1>
+      <p class="mt-6 text-zinc-300 text-base max-w-2xl mx-auto">At American Skin Art, every tattoo starts with a conversation. Custom designs, black & grey, fine line, bold graphic, cover-ups, and small tattoos—done with safety, care, and longevity in mind.</p>
+      <div class="mt-10 flex items-center justify-center">
+        <a href="#book" class="rounded-full bg-red-700 hover:bg-red-600 px-6 py-3 font-semibold">Book a Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artists (Owner + Team) -->
+  <section id="artists" class="mx-auto max-w-7xl px-6 py-20" aria-labelledby="artists-heading">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <h2 id="artists-heading" class="display text-4xl tracking-wider">Artists</h2>
+        <p class="mt-2 text-zinc-400">Meet the crew at American Skin Art.</p>
+      </div>
+    </div>
+
+    <!-- Artist Grid -->
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Devin -->
+      <a href="sinisterblack_tattoos.html" class="group rounded-2xl overflow-hidden border border-white/10 bg-black/40 block hover:border-white/20">
+        <div class="aspect-[4/3] w-full overflow-hidden">
+          <img src="images/artists/sinisterblack_tattoos/cover.jpg" alt="Devin Goff portfolio cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+        </div>
+        <div class="p-5">
+          <h3 class="display text-2xl tracking-wider">Devin Goff — <span class="text-zinc-400 text-base">@sinisterblack_tattoos</span></h3>
+        </div>
+      </a>
+      <!-- Danny -->
+      <a href="dannypeltier.ink.html" class="group rounded-2xl overflow-hidden border border-white/10 bg-black/40 block hover:border-white/20">
+        <div class="aspect-[4/3] w-full overflow-hidden">
+          <img src="images/artists/dannypeltier.ink/cover.jpg" alt="Danny Peltier portfolio cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+        </div>
+        <div class="p-5">
+          <h3 class="display text-2xl tracking-wider">Danny Peltier — <span class="text-zinc-400 text-base">@dannypeltier.ink</span></h3>
+        </div>
+      </a>
+      <!-- Dale -->
+      <a href="cruelbloomtattoo.html" class="group rounded-2xl overflow-hidden border border-white/10 bg-black/40 block hover:border-white/20">
+        <div class="aspect-[4/3] w-full overflow-hidden">
+          <img src="images/artists/cruelbloomtattoo/cover.jpg" alt="Cruel Bloom portfolio cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+        </div>
+        <div class="p-5">
+          <h3 class="display text-2xl tracking-wider">Dale Murray — <span class="text-zinc-400 text-base">@cruelbloomtattoo</span></h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Shop Slideshow -->
+  <section class="mx-auto max-w-7xl px-6 py-12">
+    <div class="relative group">
+      <a href="https://www.instagram.com/americanskinart" target="_blank" rel="noopener" 
+         class="block relative rounded-2xl overflow-hidden border border-white/10 bg-black/40 hover:border-white/20">
+        <div id="shop-slideshow" class="aspect-[16/5] w-full relative">
+          <div class="absolute inset-0 bg-black flex">
+            <!-- Images will be loaded here via JS -->
+            <div class="animate-pulse text-center py-8">Loading...</div>
+          </div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/60 backdrop-blur-sm transition-opacity duration-300">
+          <span class="bg-white/90 text-black px-6 py-3 rounded-full font-semibold">Follow @americanskinart</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="book" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="display text-4xl tracking-wider">Book a Consult</h2>
+        <p class="mt-3 text-zinc-300">Consultations help us plan size, placement, and budget. Please include references and preferred days/times. You’ll get a reply with next steps.</p>
+
+        <form id="booking-form" action="#" class="mt-8 grid grid-cols-1 gap-4" aria-labelledby="booking-form">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="sr-only">Your Name</label>
+              <input required id="name" name="name" class="w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3" placeholder="Your Name" aria-required="true">
+            </div>
+            <div>
+              <label for="email" class="sr-only">Email</label>
+              <input required type="email" id="email" name="email" class="w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3" placeholder="Email" aria-required="true">
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="phone" class="sr-only">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" class="w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3" placeholder="Phone (optional)" aria-required="false">
+            </div>
+            <div>
+              <label for="placement" class="sr-only">Tattoo Placement</label>
+              <input id="placement" name="placement" class="w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3" placeholder="Placement (e.g., forearm)" aria-required="false">
+            </div>
+          </div>
+          <div>
+            <label for="idea" class="sr-only">Your Tattoo Idea</label>
+            <textarea id="idea" name="idea" rows="5" class="w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3" placeholder="Describe your idea. Include size in inches, black & grey or color, and any reference links." aria-required="false"></textarea>
+          </div>
+          <button type="button" disabled class="rounded-xl bg-zinc-700/70 px-5 py-3 font-semibold cursor-not-allowed">Send Request (placeholder)</button>
+          <p class="text-xs text-zinc-500">Scheduler coming soon.</p>
+        </form>
+      </div>
+      <aside class="bg-black/40 rounded-2xl border border-white/10 p-6">
+        <h3 class="font-semibold text-lg">Booking & Deposit Policy</h3>
+        <ul class="mt-3 text-sm text-zinc-300 space-y-2">
+          <li>• A non-refundable deposit is required to hold your appointment. It applies to the final session.</li>
+          <li>• 48-hour notice to reschedule. No-shows forfeit deposit.</li>
+          <li>• Bring a valid ID. You must be 18+ for tattoos. No minors in the procedure area.</li>
+          <li>• Arrive well-rested, hydrated, and fed.</li>
+        </ul>
+        <div class="mt-6">
+          <h4 class="font-semibold">Aftercare</h4>
+          <p class="mt-2 text-sm text-zinc-300">Wash gently with antibacterial soap, pat dry, and apply a thin layer of recommended ointment 2–3× daily for 3–5 days. Avoid sun, pools, and picking. Follow studio instructions.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Shop Info -->
+  <section id="shop" class="bg-black/40 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-2 gap-10">
+      <div>
+        <h2 class="display text-4xl tracking-wider">American Skin Art</h2>
+        <p class="mt-3 text-zinc-300">44 Webster St, North Tonawanda, NY 14120</p>
+        <div class="mt-4 text-sm text-zinc-300">
+          <p><strong>Hours</strong></p>
+          <p>Tue–Sat: 12pm – 8pm</p>
+          <p>Sun–Mon: Closed</p>
+        </div>
+        <div class="mt-4 text-sm text-zinc-300 space-y-1">
+          <p><strong>Call</strong>: <a class="underline" href="tel:+17166949185">(716) 694-9185</a></p>
+          <p><strong>Email</strong>: <a class="underline" href="mailto:info@americanskinart.example">info@americanskinart.example</a></p>
+          <p><strong>Instagram</strong>: <a class="underline" href="https://instagram.com/americanskinart" target="_blank" rel="noopener">@americanskinart</a></p>
+          <p><strong>Google</strong>: <a class="underline" href="https://share.google/s5hH7YX2zrZPiW8VM" target="_blank" rel="noopener">Business Profile & Reviews</a></p>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-white/10">
+        <iframe title="Map" class="w-full h-[320px] md:h-[420px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=44%20Webster%20St%2C%20North%20Tonawanda%2C%20NY%2014120&output=embed"></iframe>
+      </div>
+      <div class="mt-4">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=44%20Webster%20St%2C%20North%20Tonawanda%2C%20NY%2014120" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-white text-black px-4 py-2 text-sm font-semibold hover:bg-zinc-100">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact" class="bg-black/40 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-10">
+      <!-- Left: copy + links -->
+      <div class="md:col-span-1">
+  <h2 class="display text-3xl tracking-wider">Questions?</h2>
+
+  <!-- Primary contact -->
+  <div class="mt-3 space-y-2 text-zinc-300 text-sm">
+    <div>
+      <span class="font-semibold text-zinc-200">Email</span> —
+      <a class="underline" href="mailto:info@americanskinart.example">info@americanskinart.example</a>
+    </div>
+    <div class="pt-2">
+      <span class="font-semibold text-zinc-200">Instagram</span>
+      <ul class="mt-2 space-y-2">
+        <!-- Studio -->
+        <li>
+          <a href="https://instagram.com/americanskinart" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 hover:text-white/90">
+            <!-- IG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                 class="opacity-90">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11.001 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7ZM18.5 6a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001Z"/>
+            </svg>
+            <span class="font-medium">@americanskinart</span>
+            <span class="ml-2 text-xs text-zinc-400">(Studio)</span>
+          </a>
+        </li>
+
+        <!-- Devin -->
+        <li>
+          <a href="https://instagram.com/sinisterblack_tattoos" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 hover:text-white/90">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                 class="opacity-90">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11.001 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7ZM18.5 6a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001Z"/>
+            </svg>
+            <span class="font-medium">@sinisterblack_tattoos</span>
+            <span class="ml-2 text-xs text-zinc-400">(Devin Goff)</span>
+          </a>
+        </li>
+
+        <!-- Danny -->
+        <li>
+          <a href="https://instagram.com/dannypeltier.ink" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 hover:text-white/90">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                 class="opacity-90">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11.001 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7ZM18.5 6a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001Z"/>
+            </svg>
+            <span class="font-medium">@dannypeltier.ink</span>
+            <span class="ml-2 text-xs text-zinc-400">(Danny Peltier)</span>
+          </a>
+        </li>
+
+        <!-- Dale -->
+        <li>
+          <a href="https://instagram.com/cruelbloomtattoo" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 hover:text-white/90">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                 class="opacity-90">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11.001 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7ZM18.5 6a1 1 0 1 1 0 2.001 1 1 0 0 1 0-2.001Z"/>
+            </svg>
+            <span class="font-medium">@cruelbloomtattoo</span>
+            <span class="ml-2 text-xs text-zinc-400">(Dale Murray)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA buttons -->
+  <div class="mt-6 flex flex-wrap gap-2">
+    <a href="https://share.google/s5hH7YX2zrZPiW8VM" target="_blank" rel="noopener"
+       class="inline-flex items-center rounded-full bg-white text-black px-4 py-2 text-sm font-semibold hover:bg-zinc-100">
+      See us on Google
+    </a>
+    <a href="tel:+17166949185"
+       class="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/5">
+      Call the Shop
+    </a>
+  </div>
+</div>
+
+
+      <!-- Right: placeholder contact form (no backend/JS) -->
+      <div class="md:col-span-2">
+        <form action="#" class="rounded-2xl border border-white/10 bg-black/40 p-6 space-y-4" aria-label="Contact form (placeholder)">
+          <div class="grid gap-4 md:grid-cols-2">
+            <div>
+              <label for="cf-name" class="block text-sm text-zinc-400">Name</label>
+              <input id="cf-name" type="text"
+                     class="mt-1 w-full rounded-lg bg-zinc-900/70 border border-white/10 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none"
+                     placeholder="Your name" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-sm text-zinc-400">Email</label>
+              <input id="cf-email" type="email"
+                     class="mt-1 w-full rounded-lg bg-zinc-900/70 border border-white/10 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none"
+                     placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div>
+            <label for="cf-subject" class="block text-sm text-zinc-400">Subject</label>
+            <input id="cf-subject" type="text"
+                   class="mt-1 w-full rounded-lg bg-zinc-900/70 border border-white/10 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none"
+                   placeholder="Booking, question, etc." />
+          </div>
+
+          <div>
+            <label for="cf-message" class="block text-sm text-zinc-400">Message</label>
+            <textarea id="cf-message" rows="5"
+                      class="mt-1 w-full rounded-lg bg-zinc-900/70 border border-white/10 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none"
+                      placeholder="Tell us what you’re looking for (style, size, placement)…"></textarea>
+          </div>
+
+          <button type="button" disabled
+                  class="inline-flex items-center rounded-full bg-zinc-700/70 text-zinc-300 px-4 py-2 text-sm font-semibold cursor-not-allowed"
+                  title="Placeholder only — submission will be enabled later">
+            Send Message (placeholder)
+          </button>
+        </form>
+      </div>
+
+      <!-- Footer Nav -->
+      <nav class="md:col-span-3 mt-6">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+    <a href="#artists" class="text-center py-2 text-sm text-zinc-300 hover:text-white">Artists</a>
+    <a href="#book"    class="text-center py-2 text-sm text-zinc-300 hover:text-white">Book</a>
+    <a href="#shop"    class="text-center py-2 text-sm text-zinc-300 hover:text-white">Shop</a>
+    <a href="faq.html"     class="text-center py-2 text-sm text-zinc-300 hover:text-white md:col-span-1 col-span-2">FAQ</a>
+  </div>
+</nav>
+
+    </div>
+
+    <footer class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+        <p>© <span id="year"></span> American Skin Art — North Tonawanda, NY</p>
+        <p>Site by doomsday</p>
+      </div>
+
+      <!-- Memorial plaque -->
+      <div class="mx-auto max-w-7xl px-6 pb-6">
+        <div class="flex items-center gap-3 justify-center text-zinc-400 hover:text-zinc-200 transition">
+          <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-black/50 border border-white/10">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="opacity-80">
+              <path d="M12 2c1.5 1.5 2 3 2 4 0 2-2 3-2 5 0-2-2-3-2-5 0-1 .5-2.5 2-4Z" fill="currentColor"/>
+              <path d="M6 12h12v9a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-9Z" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </span>
+          <a href="deadedwalker_memorial.html" class="text-xs">In loving memory of <strong>Deaded Walker</strong></a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/90 backdrop-blur z-50 flex items-center justify-center p-6">
+    <img class="max-h-[90vh] max-w-[90vw] rounded-xl border border-white/10" alt="Artwork preview" />
+  </div>
+
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-mobile-menu');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    }
+    mobileMenuButton.addEventListener('click', toggleMobileMenu);
+    closeMenuButton.addEventListener('click', toggleMobileMenu);
+    mobileMenuLinks.forEach(link => link.addEventListener('click', toggleMobileMenu));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) toggleMobileMenu();
+    });
+  </script>
+
+  <!-- Floating Creator IG Button -->
+  <a href="https://instagram.com/ffogekaj" target="_blank" rel="noopener"
+     class="fixed bottom-5 right-5 z-50 group" aria-label="Visit @ffogekaj on Instagram">
+    <div class="rounded-full p-1 bg-black/60 backdrop-blur border border-white/10 shadow-lg transition transform group-hover:scale-[1.04]">
+      <img src="images/artists/creator-pfp.png" alt="" class="w-[88px] h-[88px] rounded-full block select-none pointer-events-none" />
+    </div>
+  </a>
+
+  <!-- Data + scripts for galleries & sliders (unchanged) -->
+  <script type="application/json" id="devin-works">[
+    {"src":"/images/artists/sinisterblack_tattoos/work01.jpg","alt":"Work 01 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work02.jpg","alt":"Work 02 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work03.jpg","alt":"Work 03 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work04.jpg","alt":"Work 04 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work05.jpg","alt":"Work 05 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work06.jpg","alt":"Work 06 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work07.jpg","alt":"Work 07 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work08.jpg","alt":"Work 08 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work09.jpg","alt":"Work 09 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work10.jpg","alt":"Work 10 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work11.jpg","alt":"Work 11 by @sinisterblack_tattoos"},
+    {"src":"/images/artists/sinisterblack_tattoos/work12.jpg","alt":"Work 12 by @sinisterblack_tattoos"}]</script>
+
+  <script defer src="/assets/js/slider.js?v=asa-v1"></script>
+
+  <script type="application/json" id="danny-works">[
+    {"src":"/images/artists/danny-peltier/work01.jpg","alt":"Work 01 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work02.jpg","alt":"Work 02 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work03.jpg","alt":"Work 03 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work04.jpg","alt":"Work 04 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work05.jpg","alt":"Work 05 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work06.jpg","alt":"Work 06 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work07.jpg","alt":"Work 07 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work08.jpg","alt":"Work 08 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work09.jpg","alt":"Work 09 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work10.jpg","alt":"Work 10 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work11.jpg","alt":"Work 11 by Danny Peltier"},
+    {"src":"/images/artists/danny-peltier/work12.jpg","alt":"Work 12 by Danny Peltier"}]</script>
+
+  <script type="application/json" id="dale-works">[
+    {"src":"/images/artists/dale-murray/work01.jpg","alt":"Work 01 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work02.jpg","alt":"Work 02 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work03.jpg","alt":"Work 03 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work04.jpg","alt":"Work 04 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work05.jpg","alt":"Work 05 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work06.jpg","alt":"Work 06 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work07.jpg","alt":"Work 07 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work08.jpg","alt":"Work 08 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work09.jpg","alt":"Work 09 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work10.jpg","alt":"Work 10 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work11.jpg","alt":"Work 11 by Dale Murray"},
+    {"src":"/images/artists/dale-murray/work12.jpg","alt":"Work 12 by Dale Murray"}]</script>
+
+  <script>
+  (function(){
+    function renderGallery(handle){
+      var gridEl = document.getElementById(handle + '-gallery');
+      if (!gridEl) return;
+      try {
+        var dataEl = document.getElementById(handle + '-works');
+        if (!dataEl) return;
+        var items = JSON.parse(dataEl.textContent || '[]');
+        gridEl.innerHTML = items.map(function(it){
+          var alt = it.alt || '';
+          var src = it.src;
+          return '<figure class="group rounded-xl overflow-hidden border border-white/10 bg-black/40">'
+            + '<div class="aspect-square w-full overflow-hidden">'
+            + '<img loading="lazy" decoding="async" src="'+src+'" alt="'+alt+'" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300">'
+            + '</div><figcaption class="p-2 text-xs text-zinc-400">'+alt+'</figcaption></figure>';
+        }).join('');
+      } catch (e) { console.error(e); }
+    }
+    ['devin','danny','dale'].forEach(renderGallery);
+  })();
+  </script>
+
+  <!-- ASA auto-discovery slider -->
+  <script>
+  (function () {
+    const el = document.getElementById("recent-showcase");
+    if (!el) return;
+
+    const folder   = "images/artists/asa";
+    const prefix   = "asa-";
+    const zeroPad  = 2;
+    const exts     = ["jpg","jpeg","webp","png"];
+    const startAt  = 1;
+    const maxTry   = 200;
+    const gapLimit = 5;
+    const autoMs   = 3500;
+
+    function resolveUrl(i) {
+      return new Promise((resolve) => {
+        let k = 0;
+        const n = String(i).padStart(zeroPad, "0");
+        function tryNext() {
+          if (k >= exts.length) return resolve(null);
+          const url = `${folder}/${prefix}${n}.${exts[k]}`;
+          const img = new Image();
+          img.decoding = "async"; img.loading = "lazy";
+          img.onload = () => resolve(url);
+          img.onerror = () => { k++; tryNext(); };
+          img.src = url + `?v=${Date.now()}`;
+        }
+        tryNext();
+      });
+    }
+
+    async function discover() {
+      const urls = [];
+      let misses = 0;
+      for (let i = startAt; i < startAt + maxTry; i++) {
+        const url = await resolveUrl(i);
+        if (url) { urls.push(url); misses = 0; }
+        else { misses++; if (misses >= gapLimit) break; }
+      }
+      return urls;
+    }
+
+    function buildSlider(urls) {
+      if (!urls.length) {
+        el.innerHTML = `<p class="text-zinc-400">No images found in <code>${folder}/</code>.</p>`;
+        return;
+      }
+
+      el.innerHTML = `
+        <div class="relative group select-none">
+          <div class="overflow-hidden rounded-xl border border-white/10">
+            <div class="flex transition-transform duration-500 ease-out will-change-transform" id="asa-track" style="transform:translateX(0)">
+              ${urls.map(u => `
+                <div class="shrink-0 w-full md:w-[66%] lg:w-[50%] aspect-[4/3] relative bg-zinc-900">
+                  <img src="${u}" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <button aria-label="Previous" id="asa-prev"
+            class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/10 backdrop-blur hover:bg-black/80 focus:outline-none">
+            &#10094;
+          </button>
+          <button aria-label="Next" id="asa-next"
+            class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/10 backdrop-blur hover:bg-black/80 focus:outline-none">
+            &#10095;
+          </button>
+
+          <div class="mt-4 flex justify-center gap-2" id="asa-dots"></div>
+        </div>
+      `;
+
+      const track = document.getElementById("asa-track");
+      const prev  = document.getElementById("asa-prev");
+      const next  = document.getElementById("asa-next");
+      const dots  = document.getElementById("asa-dots");
+
+      let index = 0;
+      const count = urls.length;
+      let auto = null;
+
+      dots.innerHTML = urls.map((_, i) =>
+        `<button class="w-2.5 h-2.5 rounded-full border border-white/20 ${i===0?'bg-white/80':'bg-white/10'}" data-i="${i}" aria-label="Go to slide ${i+1}"></button>`
+      ).join("");
+
+      function update() {
+        const slideW = track.children[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(${-index * slideW}px)`;
+        [...dots.children].forEach((d, i) => {
+          d.classList.toggle("bg-white/80", i === index);
+          d.classList.toggle("bg-white/10", i !== index);
+        });
+      }
+
+      function nextSlide() { index = (index + 1) % count; update(); }
+      function prevSlide() { index = (index - 1 + count) % count; update(); }
+
+      next.addEventListener("click", nextSlide);
+      prev.addEventListener("click", prevSlide);
+      dots.addEventListener("click", (e) => {
+        const b = e.target.closest("button[data-i]");
+        if (!b) return;
+        index = +b.dataset.i;
+        update();
+      });
+
+      const shell = el.querySelector(".group");
+      function startAuto() { if (!autoMs) return; stopAuto(); auto = setInterval(nextSlide, autoMs); }
+      function stopAuto()  { if (auto) clearInterval(auto); auto = null; }
+
+      shell.addEventListener("mouseenter", stopAuto);
+      shell.addEventListener("mouseleave", startAuto);
+      shell.addEventListener("touchstart", stopAuto, {passive:true});
+      shell.addEventListener("touchend", startAuto, {passive:true});
+
+      let x0 = null;
+      shell.addEventListener("touchstart", (e)=>{ x0 = e.touches[0].clientX; }, {passive:true});
+      shell.addEventListener("touchend", (e)=>{
+        if (x0 == null) return;
+        const dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) (dx < 0 ? nextSlide() : prevSlide());
+        x0 = null;
+      }, {passive:true});
+
+      window.addEventListener("keydown", (e)=>{
+        if (e.key === "ArrowRight") nextSlide();
+        if (e.key === "ArrowLeft")  prevSlide();
+      });
+
+      window.addEventListener("resize", update);
+
+      update();
+      startAuto();
+    }
+
+    discover().then(buildSlider).catch(() => {
+      el.innerHTML = `<p class="text-red-400">Error loading images.</p>`;
+    });
+  })();
+  </script>
+
+  <!-- Shop Slideshow Script -->
+  <script>
+  (function(){
+    const slideshow = document.getElementById('shop-slideshow');
+    if (!slideshow) return;
+
+    const folder = 'images/artists/asa';
+    const prefix = 'asa-';
+    const imagesPerView = 4;
+    let currentIndex = 0;
+    let slides = [];
+
+    for (let i = 1; i <= 10; i++) {
+      const num = String(i).padStart(2, '0');
+      slides.push(`${folder}/${prefix}${num}.jpg`);
+    }
+
+    const container = document.createElement('div');
+    container.className = 'absolute inset-0 flex gap-2 transition-transform duration-500';
+    slideshow.innerHTML = '';
+    slideshow.appendChild(container);
+    
+    const images = slides.map(() => {
+      const div = document.createElement('div');
+      div.className = 'w-1/4 flex-shrink-0';
+      const img = new Image();
+      img.className = 'w-full h-full object-cover';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      div.appendChild(img);
+      container.appendChild(div);
+      return img;
+    });
+
+    function updateSlides() {
+      images.forEach((img, i) => {
+        const slideIndex = (currentIndex + i) % slides.length;
+        img.src = slides[slideIndex];
+      });
+      container.style.transform = 'translateX(0)';
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + imagesPerView) % slides.length;
+      updateSlides();
+    }
+
+    updateSlides();
+    setInterval(nextSlide, 4000);
+  })();
+  </script>
+</body>
+</html>

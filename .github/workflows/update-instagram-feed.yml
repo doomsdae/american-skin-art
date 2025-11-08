@@ -1,0 +1,40 @@
+name: Update Instagram Feed JSON
+
+on:
+  schedule:
+    - cron: '5 13 * * *'   # 08:05 America/New_York (EST/EDT offset handled by UTC cron)
+  workflow_dispatch: {}
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow committing back to repo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch JSON from Worker (or any endpoint)
+        env:
+          WORKER_JSON_URL: ${{ secrets.WORKER_JSON_URL }}
+        run: |
+          set -e
+          if [ -z "$WORKER_JSON_URL" ]; then
+            echo "WORKER_JSON_URL secret is not set. Add it in GitHub → Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          mkdir -p data
+          echo "Fetching $WORKER_JSON_URL ..."
+          curl -fsSL "$WORKER_JSON_URL" -o data/instagram-feed.json.tmp
+          # Validate JSON
+          cat data/instagram-feed.json.tmp | jq . > /dev/null
+          mv data/instagram-feed.json.tmp data/instagram-feed.json
+          echo "Saved to data/instagram-feed.json"
+          # Show top-level size
+          jq 'length' data/instagram-feed.json || true
+
+      - name: Commit updated JSON
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(feed): refresh instagram-feed.json"
+          file_pattern: data/instagram-feed.json

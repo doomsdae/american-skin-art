@@ -1,0 +1,15 @@
+{
+  "name": "American Skin Art",
+  "email": "booking@americanskinart.com",
+  "phone": "",
+  "address": "",
+  "hours": {
+    "mon": "By appointment",
+    "tue": "By appointment",
+    "wed": "By appointment",
+    "thu": "By appointment",
+    "fri": "By appointment",
+    "sat": "By appointment",
+    "sun": "Closed"
+  }
+}

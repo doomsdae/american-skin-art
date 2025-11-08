@@ -1,0 +1,22 @@
+{
+  "artists": [
+    {
+      "slug": "devin-walker",
+      "name": "Devin Walker",
+      "role": "Owner / Lead Artist",
+      "img": "/assets/img/artists/devin-walker/devin-640.jpg"
+    },
+    {
+      "slug": "danny-peltier",
+      "name": "Danny Peltier",
+      "role": "Artist",
+      "img": "/assets/img/artists/danny-peltier/danny-640.jpg"
+    },
+    {
+      "slug": "dale-murray",
+      "name": "Dale Murray",
+      "role": "Artist",
+      "img": "/assets/img/artists/dale-murray/dale-640.jpg"
+    }
+  ]
+}
