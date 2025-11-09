@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   background-color: var(--paper);
   color: #f1f1f1;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .inter {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 /* Slider Styles */
@@ -112,11 +112,17 @@ body {
 
 /* Form Styles */
 .form-input {
-  @apply w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3;
+  width: 100%;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
 }
 
 .form-input:focus {
-  @apply border-red-700/50 outline-none ring-1 ring-red-700/30;
+  border-color: rgba(185, 28, 28, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(185, 28, 28, 0.3);
 }
 
 /* Transitions */

@@ -278,7 +278,7 @@
        class="mx-auto w-[min(92%,700px)] h-auto select-none" />
      <span class="sr-only">American Skin Art</span>
    </h1>
-<p class="mt-6 text-zinc-300 text-base max-w-2xl mx-auto">At American Skin Art, every tattoo starts with a conversation.<br>Custom designs, black &amp; grey, fine line, bold graphic, cover-ups, <br> and small tattoos, done with safety, care, and longevity in mind.</p>
+<p class="mt-6 text-zinc-300 text-base max-w-2xl mx-auto">At American Skin Art, every tattoo starts with a conversation.<br>Custom designs, black &amp; grey, fine line, bold graphic, cover-ups, and small tattoos, done with safety, care, and longevity in mind.</p>
       <div class="mt-10 flex items-center justify-center">
         <a href="#book" class="rounded-full bg-red-700 hover:bg-red-600 px-6 py-3 font-semibold">Book a Consult</a>
       </div>
@@ -565,6 +565,12 @@
 
     </div>
 
+    <footer class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+  <p>© <span id="year"></span> American&nbsp;Skin&nbsp;Art — North Tonawanda, NY</p>
+        <p>Site by doomsday</p>
+      </div>
+
       <!-- Memorial plaque -->
       <div class="mx-auto max-w-7xl px-6 pb-6">
         <div class="flex items-center gap-3 justify-center text-zinc-400 hover:text-zinc-200 transition">
@@ -607,19 +613,13 @@
     });
   </script>
 
-<!-- Floating Creator Badge (avatar above text) -->
-<div class="fixed bottom-5 right-5 z-50 flex flex-col items-center gap-2 bg-black/60 backdrop-blur rounded-2xl border border-white/10 shadow-lg px-3 py-3">
+  <!-- Floating Creator IG Button -->
   <a href="https://instagram.com/ffogekaj" target="_blank" rel="noopener"
-     aria-label="Visit @ffogekaj on Instagram"
-     class="block rounded-full p-0.5 bg-black/60 border border-white/10">
-    <img src="images/artists/creator-pfp.png" alt="" class="w-[64px] h-[64px] rounded-full block select-none" />
+     class="fixed bottom-5 right-5 z-50 group" aria-label="Visit @ffogekaj on Instagram">
+    <div class="rounded-full p-1 bg-black/60 backdrop-blur border border-white/10 shadow-lg transition transform group-hover:scale-[1.04]">
+      <img src="images/artists/creator-pfp.png" alt="" class="w-[88px] h-[88px] rounded-full block select-none pointer-events-none" />
+    </div>
   </a>
-  <p class="text-sm text-zinc-300 m-0 whitespace-nowrap select-none text-center">
-    Site by doomsday
-  </p>
-</div>
-
-
 
   <!-- Data + scripts for galleries & sliders (unchanged) -->
   <script type="application/json" id="devin-works">[
