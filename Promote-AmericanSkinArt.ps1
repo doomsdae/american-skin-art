@@ -76,15 +76,22 @@ try {
     Write-Warning "origin/main not found (first publish?). Skipping pre-push live archive."
   }
 
-  # Stage & commit local changes (if any)
-  git add -A
-  $hasChanges = $true
-  try { git diff --cached --quiet; $hasChanges = $false } catch { $hasChanges = $true }
-  if ($hasChanges) {
-    git commit -m "$Message"
-  } else {
-    Write-Host "No local changes to commit."
-  }
+ # Stage everything
+git add -A
+
+# Detect staged and unstaged changes via exit codes
+git diff --cached --quiet
+$stagedChanged = ($LASTEXITCODE -ne 0)
+
+git diff --quiet
+$worktreeChanged = ($LASTEXITCODE -ne 0)
+
+if ($stagedChanged -or $worktreeChanged) {
+  git commit -m "$Message"
+} else {
+  Write-Host "No local changes to commit."
+}
+
 
   # Rebase on remote & push
   Write-Host "Pulling (rebase) from origin/main..."
@@ -103,7 +110,7 @@ try {
       $TagName = "release-" + (Get-Date -Format "yyyyMMdd-HHmm")
     }
     # Guard against duplicates
-    $existsLocal  = (git tag -l "$TagName") -ne $null -and (git tag -l "$TagName").Trim().Length -gt 0
+    $existsLocal  = (git tag -l "$TagName" | Measure-Object).Count -gt 0
     $existsRemote = $false
     try {
       $remoteMatch = (git ls-remote --tags origin "refs/tags/$TagName") | Out-String
